@@ -1,9 +1,13 @@
 class User
-	def name=(name)
-		@name = name
-	end
+	attr_accessor :name, :address, :email
 
-	def name
-		@name
+	def profile
+		"#{name} (#{address})"
 	end
 end
+
+
+user = User.new
+user.name = "小田井優"
+user.address = "東京"
+puts user.profile
